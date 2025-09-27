@@ -62,12 +62,15 @@ video {
 
 .result {
   align-self: flex-end;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
 }
 
 .result__video-container {
   position: relative;
   width: 711px;
-  margin: 0 0 11px;
+  height: 386px;
 }
 
 .search-form {
@@ -220,15 +223,12 @@ video {
 }
 
 .content__list {
-  position: relative;
-  overflow-y: scroll;
-  block-size: 298px;
-  scrollbar-width: none;
+
 }
 
-.content__list::-webkit-scrollbar {
-  display: none;
-}
+/*.content__list::-webkit-scrollbar {*/
+/*  display: none;*/
+/*}*/
 
 .content__list-item:not(:last-child) {
   margin: 0 0 34px;
@@ -287,4 +287,25 @@ video {
   block-size: 103px;
   object-fit: cover;
   object-position: center;
+}
+
+.content__list-container {
+  position: relative;
+  overflow-y: scroll;
+  max-height: 298px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: rgba(217 217 217 / 10%);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #D9D9D9;
 }
