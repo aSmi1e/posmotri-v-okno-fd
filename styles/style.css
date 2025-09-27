@@ -222,14 +222,6 @@ video {
   color: #545050;
 }
 
-.content__list {
-
-}
-
-/*.content__list::-webkit-scrollbar {*/
-/*  display: none;*/
-/*}*/
-
 .content__list-item:not(:last-child) {
   margin: 0 0 30px;
 }
