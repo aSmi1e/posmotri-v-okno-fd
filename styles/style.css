@@ -259,19 +259,28 @@ video {
 
 .content__video-card-title {
   padding: 2px 2px 5px;
+  max-width: 196px;
   color: #fff;
   font-family: Oswald, sans-serif;
   font-size: 30px;
   line-height: 1;
   text-transform: uppercase;
   hyphens: auto;
+  text-overflow: ellipsis;
+  white-space: nowrap; overflow: hidden;
 }
 
 .content__video-card-description {
   padding: 0 2px;
+  max-width: 196px;
   color: #fff;
   font-weight: 400;
   line-height: 16.2px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  overflow: hidden;
 }
 
 .content__video-card-thumbnail {
@@ -283,7 +292,7 @@ video {
 
 .content__list-container {
   position: relative;
-  overflow-y: scroll;
+  overflow-y: auto;
   max-height: 298px;
   display: flex;
   flex-direction: column;
